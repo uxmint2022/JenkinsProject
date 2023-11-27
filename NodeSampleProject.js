@@ -1,19 +1,13 @@
-// Importing required modules
-const http = require('http');
+const express = require('express');
+const app = express();
 
-// Creating a server
-const server = http.createServer((req, res) => {
-
-  // Set the response header
-  res.writeHead(200, { 'Content-Type': 'text/plain' });
-
-  // Send the response
-  res.end('Hello, From Jenkins Sample Project! \n');
-
+// Define a route handling GET requests on the root path
+app.get('/', (req, res) => {
+  res.send('Hello, From Jenkins Sample Project! \n');
 });
 
-// Listening on port 3000
+// Start the server on port 3200
 const PORT = 3200;
-server.listen(PORT, () => {
+app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}/`);
 });
