@@ -1,0 +1,13 @@
+{
+  "name": "jenkinsproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "NodeSampleProject.js",
+  "scripts": {
+    "start": "node NodeSampleProject.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
