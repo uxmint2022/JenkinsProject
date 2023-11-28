@@ -6,6 +6,10 @@ app.get('/', (req, res) => {
   res.send('Hello, From Jenkins Sample Project! \n');
 });
 
+app.get('/webhook', (req, res) => {
+  res.send('Hello, From Jenkins Sample Project Webhook Route! \n');
+});
+
 // Start the server on port 3200
 const PORT = 3200;
 app.listen(PORT, () => {
