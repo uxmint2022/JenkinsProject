@@ -1,14 +1,23 @@
-const express = require('express');
-const app = express();
+const express = require('express')
+
+const app = express()
+const router = express.Router()
+
+
+
 
 // Define a route handling GET requests on the root path
-app.get('/', (req, res) => {
-  res.send('Hello, From Jenkins Sample Project! \n');
+router.get('/', (req, res) => {
+  res.json({
+    message:'Hello, From Jenkins Sample Project! \n'
+  });
 });
 
-app.get('/webhook', (req, res) => {
+router.get('/webhook', (req, res) => {
   res.send('Hello, From Jenkins Sample Project Webhook Route! \n');
 });
+
+
 
 // Start the server on port 3200
 const PORT = 3200;
