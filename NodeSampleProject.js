@@ -16,10 +16,6 @@ router.get('/', (req, res) => {
 });
 
 
-router.get('/webhook', (req, res) => {
-  res.send('Hello, From Jenkins Sample Project Webhook Page! \n');
-});
-
 
 // Start the server on port 3200
 const PORT = 3200;
